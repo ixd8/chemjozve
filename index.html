@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<meta name="theme-color" content="#3b5bfd" />
+<title>دانلود جزوه شیمی دوازدهم</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;700;800&display=swap" rel="stylesheet">
+
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --bg: #eef2f9;
+    --card: #ffffff;
+    --text: #16233b;
+    --muted: #6b7a90;
+    --brand: #3b5bfd;
+    --brand2: #7a5cff;
+    --line: #e5eaf3;
+    --shadow: 0 10px 30px -14px rgba(24, 39, 75, .35);
+  }
+
+  html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Vazirmatn', Tahoma, system-ui, -apple-system, sans-serif;
+    color: var(--text);
+    line-height: 1.9;
+    min-height: 100dvh;
+    overflow-x: hidden;
+    background:
+      radial-gradient(620px 420px at 100% 0%, #c7d2fe 0%, transparent 70%),
+      radial-gradient(620px 420px at 0% 100%, #b2f5ea 0%, transparent 70%),
+      var(--bg);
+    background-attachment: fixed;
+  }
+
+  .wrap {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 26px 16px calc(30px + env(safe-area-inset-bottom));
+  }
+
+  .head { text-align: center; margin-bottom: 24px; }
+
+  .badge {
+    display: inline-block;
+    font-size: 12px;
+    font-weight: 700;
+    background: #e0e7ff;
+    color: #3730a3;
+    padding: 6px 14px;
+    border-radius: 999px;
+    margin-bottom: 12px;
+  }
+
+  h1 {
+    font-size: clamp(22px, 6.2vw, 32px);
+    font-weight: 800;
+    letter-spacing: -.4px;
+    line-height: 1.5;
+  }
+
+  h1 span {
+    background: linear-gradient(120deg, var(--brand), var(--brand2));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+
+  .sub {
+    color: var(--muted);
+    font-size: 14px;
+    margin-top: 6px;
+  }
+
+
+  .hero {
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(135deg, #3b5bfd 0%, #7a5cff 55%, #a855f7 100%);
+    color: #fff;
+    border-radius: 24px;
+    padding: 24px 20px;
+    margin-bottom: 30px;
+    box-shadow: 0 22px 40px -20px rgba(59, 91, 253, .95);
+  }
+
+  .hero::after {
+    content: '';
+    position: absolute;
+    bottom: -70px;
+    right: -50px;
+    width: 190px;
+    height: 190px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, .13);
+  }
+
+  .hero::before {
+    content: '';
+    position: absolute;
+    top: -60px;
+    left: -40px;
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, .10);
+  }
+
+  .hero-inner { position: relative; z-index: 1; }
+
+  .hero h2 { font-size: 18px; font-weight: 800; }
+  .hero p  { font-size: 13px; opacity: .88; margin-top: 2px; }
+
+  .btn-hero {
+    margin-top: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 9px;
+    width: 100%;
+    padding: 15px 18px;
+    border-radius: 16px;
+    background: #fff;
+    color: #2f3fd0;
+    font-family: inherit;
+    font-size: 15px;
+    font-weight: 800;
+    text-decoration: none;
+    border: 0;
+    cursor: pointer;
+    transition: transform .15s ease, box-shadow .2s ease;
+    box-shadow: 0 12px 24px -12px rgba(0, 0, 0, .5);
+  }
+
+  .btn-hero:active { transform: scale(.975); }
+
+  .btn-hero svg { width: 19px; height: 19px; }
+
+
+  .section-title {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 15px;
+    font-weight: 800;
+    color: var(--text);
+    margin-bottom: 14px;
+  }
+
+  .section-title::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: linear-gradient(to left, var(--line), transparent);
+  }
+
+
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  @media (min-width: 600px) {
+    .grid { grid-template-columns: 1fr 1fr; }
+  }
+
+  .card {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 20px;
+    padding: 16px;
+    box-shadow: var(--shadow);
+    transition: transform .2s ease, box-shadow .2s ease;
+  }
+
+  @media (hover: hover) {
+    .card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 18px 34px -18px rgba(24, 39, 75, .45);
+    }
+  }
+
+  .card-top {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .num {
+    flex: 0 0 46px;
+    width: 46px;
+    height: 46px;
+    border-radius: 15px;
+    display: grid;
+    place-items: center;
+    font-size: 18px;
+    font-weight: 800;
+    color: #fff;
+    background: linear-gradient(135deg, #3b5bfd, #7a5cff);
+  }
+
+  .card:nth-child(1) .num { background: linear-gradient(135deg, #2563eb, #38bdf8); }
+  .card:nth-child(2) .num { background: linear-gradient(135deg, #7c3aed, #c026d3); }
+  .card:nth-child(3) .num { background: linear-gradient(135deg, #0d9488, #34d399); }
+  .card:nth-child(4) .num { background: linear-gradient(135deg, #ea580c, #f59e0b); }
+
+  .card h3 {
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 1.6;
+  }
+
+  .meta {
+    font-size: 12px;
+    color: var(--muted);
+    margin-top: 2px;
+  }
+
+  .dl {
+    margin-top: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    width: 100%;
+    padding: 12px;
+    border-radius: 14px;
+    background: #f1f5ff;
+    border: 1px solid #dbe4ff;
+    color: #2f45d8;
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: 700;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background .2s ease, transform .15s ease;
+  }
+
+  .dl:active { transform: scale(.98); background: #e0e8ff; }
+  .dl svg { width: 17px; height: 17px; }
+
+
+  .foot {
+    margin-top: 34px;
+    padding: 22px 16px;
+    text-align: center;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, .7);
+    border: 1px dashed #cbd5e1;
+    backdrop-filter: blur(6px);
+  }
+
+  .foot .thanks {
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--text);
+  }
+
+  .foot .thanks .name {
+    background: linear-gradient(120deg, var(--brand), var(--brand2));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+
+  .foot .small {
+    font-size: 12px;
+    color: var(--muted);
+    margin-top: 6px;
+  }
+
+
+  #toast {
+    position: fixed;
+    bottom: calc(22px + env(safe-area-inset-bottom));
+    left: 50%;
+    transform: translate(-50%, 140%);
+    opacity: 0;
+    background: #16233b;
+    color: #fff;
+    font-size: 13.5px;
+    font-weight: 600;
+    padding: 12px 20px;
+    border-radius: 14px;
+    box-shadow: 0 14px 34px -10px rgba(0, 0, 0, .55);
+    white-space: nowrap;
+    max-width: 92vw;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    pointer-events: none;
+    z-index: 99;
+    transition: transform .35s cubic-bezier(.2, .8, .2, 1), opacity .3s ease;
+  }
+
+  #toast.show {
+    transform: translate(-50%, 0);
+    opacity: 1;
+  }
+</style>
+</head>
+<body>
+
+<main class="wrap">
+
+
+  <header class="head">
+    <div class="badge">شیمی ۳ — پایه دوازدهم</div>
+    <h1>دانلود <span>جزوه شیمی</span> دوازدهم</h1>
+    <p class="sub">فایل کامل و فصل‌به‌فصل، آماده دانلود</p>
+  </header>
+
+  
+  <section class="hero">
+    <div class="hero-inner">
+      <h2>📘 جزوه کامل شیمی دوازدهم</h2>
+      <p>شامل هر ۴ فصل — یک فایل یکجا</p>
+
+      <a class="btn-hero dl"
+         href="Chemistry12.pdf"
+         download
+         data-title="جزوه کامل">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+             stroke-linecap="round" stroke-linejoin="round">
+          <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+          <polyline points="7 10 12 15 17 10"/>
+          <line x1="12" y1="15" x2="12" y2="3"/>
+        </svg>
+        دانلود فایل کامل
+      </a>
+    </div>
+  </section>
+
+
+  <h2 class="section-title">دانلود فصل به فصل</h2>
+
+  <section class="grid">
+
+    <article class="card">
+      <div class="card-top">
+        <div class="num">۱</div>
+        <div>
+          <h3>مولکول‌ها در خدمت تندرستی</h3>
+          <div class="meta">PDF — فصل اول</div>
+        </div>
+      </div>
+      <a class="dl" href="fasl1_Chemistry_12.pdf" download data-title="فصل اول">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+             stroke-linecap="round" stroke-linejoin="round">
+          <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+          <polyline points="7 10 12 15 17 10"/>
+          <line x1="12" y1="15" x2="12" y2="3"/>
+        </svg>
+        دانلود فصل ۱
+      </a>
+    </article>
+
+    <article class="card">
+      <div class="card-top">
+        <div class="num">۲</div>
+        <div>
+          <h3>آسایش و رفاه در سایهٔ شیمی</h3>
+          <div class="meta">PDF — فصل دوم</div>
+        </div>
+      </div>
+      <a class="dl" href="fasl2_Chemistry_12.pdf" download data-title="فصل دوم">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+             stroke-linecap="round" stroke-linejoin="round">
+          <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+          <polyline points="7 10 12 15 17 10"/>
+          <line x1="12" y1="15" x2="12" y2="3"/>
+        </svg>
+        دانلود فصل ۲
+      </a>
+    </article>
+
+    <article class="card">
+      <div class="card-top">
+        <div class="num">۳</div>
+        <div>
+          <h3>شیمی، جلوه‌ای از هنر، زیبایی و ماندگاری</h3>
+          <div class="meta">PDF — فصل سوم</div>
+        </div>
+      </div>
+      <a class="dl" href="fasl3_Chemistry_12.pdf" download data-title="فصل سوم">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+             stroke-linecap="round" stroke-linejoin="round">
+          <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+          <polyline points="7 10 12 15 17 10"/>
+          <line x1="12" y1="15" x2="12" y2="3"/>
+        </svg>
+        دانلود فصل ۳
+      </a>
+    </article>
+
+    <article class="card">
+      <div class="card-top">
+        <div class="num">۴</div>
+        <div>
+          <h3>شیمی، راهی به سوی آیندهٔ روشن</h3>
+          <div class="meta">PDF — فصل چهارم</div>
+        </div>
+      </div>
+      <a class="dl" href="fasl4_Chemistry_12.pdf" download data-title="فصل چهارم">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+             stroke-linecap="round" stroke-linejoin="round">
+          <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+          <polyline points="7 10 12 15 17 10"/>
+          <line x1="12" y1="15" x2="12" y2="3"/>
+        </svg>
+        دانلود فصل ۴
+      </a>
+    </article>
+
+  </section>
+
+  <footer class="foot">
+    <div class="thanks">با تشکر از استاد <span class="name">پورنجف</span> 🌹</div>
+  </footer>
+
+</main>
+
+<div id="toast" role="status" aria-live="polite"></div>
+
+<script>
+  const toastEl = document.getElementById('toast');
+  let toastTimer = null;
+
+  function showToast(message) {
+    toastEl.textContent = message;
+    toastEl.classList.add('show');
+    clearTimeout(toastTimer);
+    toastTimer = setTimeout(() => toastEl.classList.remove('show'), 2400);
+  }
+
+  document.querySelectorAll('.dl').forEach(function (link) {
+    link.addEventListener('click', function () {
+      const title = link.dataset.title || 'فایل';
+      showToast('در حال دانلود: ' + title + ' ⬇️');
+    });
+  });
+</script>
+
+</body>
+</html>
